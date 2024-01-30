@@ -191,7 +191,7 @@ export default {
     document.body.addEventListener('click', this.handleDocumentClick)
   },
 
-  beforeDestroy() {
+  beforeUnmount() {
     document.body.removeEventListener('click', this.handleDocumentClick)
   },
 
