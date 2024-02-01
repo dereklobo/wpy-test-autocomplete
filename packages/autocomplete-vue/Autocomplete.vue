@@ -46,7 +46,7 @@ import getAriaLabel from '../autocomplete/util/getAriaLabel'
 export default {
   name: 'Autocomplete',
   inheritAttrs: false,
-
+  emits:['update','submit'],
   props: {
     search: {
       type: Function,
