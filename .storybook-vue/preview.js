@@ -1,11 +1,11 @@
 import { createApp} from 'vue';
-import { addDecorator, addParameters } from '@storybook/vue';
+import { addDecorator, addParameters } from '@storybook/vue3';
 import { withStyles } from 'storybook-addon-styles/vue'
 import '../packages/style.css'
 import './style.css'
 import Autocomplete from '../packages/autocomplete-vue/Autocomplete.vue'
 
-createApp().component('Autocomplete', Autocomplete)
+createApp(<div id="app"></div>).component('Autocomplete', Autocomplete).mount('#app')
 
 addDecorator(withStyles)
 addParameters({
