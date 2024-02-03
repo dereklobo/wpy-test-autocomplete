@@ -60,7 +60,7 @@
   "name": "autocomplete",
   "description": "<h3 align=\"center\">   Autocomplete </h3>",
   "version": "3.0.0",
-  "main": "./dist/autocomplete.umd.js",
+  "main": "/dist/autocomplete.umd.js",
   "directories": {
     "doc": "docs"
   },
