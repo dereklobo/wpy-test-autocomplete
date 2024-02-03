@@ -59,8 +59,8 @@
   },
   "name": "autocomplete",
   "description": "<h3 align=\"center\">   Autocomplete </h3>",
-  "version": "1.0.0",
-  "main": ".eslintrc.js",
+  "version": "3.0.0",
+  "main": "./dist/autocomplete.umd.js",
   "directories": {
     "doc": "docs"
   },
@@ -715,8 +715,8 @@
     "type": "git",
     "url": "git+https://github.com/dereklobo/wpy-test-autocomplete.git"
   },
-  "author": "Derek Lobo",
-  "license": "UNLICENSED",
+  "contributor": "Derek Lobo",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/dereklobo/wpy-test-autocomplete/issues"
   },

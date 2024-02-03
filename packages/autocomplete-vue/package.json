@@ -4,7 +4,7 @@
   "description": "Simple autocomplete component in vanilla JS and Vue",
   "type": "module",
   "files": ["dist"],
-  "main": "dist/autocomplete.cjs.js",
+  "main": "dist/autocomplete.umd.js",
   "module": "dist/autocomplete.esm.js",
   "unpkg": "dist/autocomplete.min.js",
   "keywords": [
