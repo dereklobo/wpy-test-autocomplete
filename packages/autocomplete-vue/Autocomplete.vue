@@ -130,7 +130,7 @@ export default {
         autocomplete: 'off',
         autocapitalize: 'off',
         autocorrect: 'off',
-        spellcheck: false,
+        spellcheck: null,
         'aria-autocomplete': 'list',
         'aria-haspopup': 'listbox',
         'aria-owns': this.resultListId,

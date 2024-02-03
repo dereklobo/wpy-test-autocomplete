@@ -243,7 +243,7 @@ const T = (t = "") => `${t}${++H}`, O = (t, e) => {
         autocomplete: "off",
         autocapitalize: "off",
         autocorrect: "off",
-        spellcheck: !1,
+        spellcheck: null,
         "aria-autocomplete": "list",
         "aria-haspopup": "listbox",
         "aria-owns": this.resultListId,
