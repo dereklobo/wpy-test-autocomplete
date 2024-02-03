@@ -5,7 +5,8 @@ import '../packages/style.css'
 import './style.css'
 import Autocomplete from '../packages/autocomplete-vue/Autocomplete.vue'
 
-createApp(<div id="app"></div>).component('Autocomplete', Autocomplete).mount('#app')
+createApp().component('Autocomplete', Autocomplete)
+// createApp(Autocomplete) 
 
 addDecorator(withStyles)
 addParameters({

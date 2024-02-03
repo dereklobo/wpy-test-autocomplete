@@ -1,7 +1,9 @@
 {
-  "name": "@trevoreyre/autocomplete-vue",
-  "version": "2.4.1",
+  "name": "autocomplete",
+  "version": "3.0.0",
   "description": "Simple autocomplete component in vanilla JS and Vue",
+  "type": "module",
+  "files": ["dist"],
   "main": "dist/autocomplete.cjs.js",
   "module": "dist/autocomplete.esm.js",
   "unpkg": "dist/autocomplete.min.js",
@@ -15,13 +17,6 @@
     "a11y",
     "WAI-ARIA",
     "vue"
-  ],
-  "author": "Trevor Eyre <trevoreyre@gmail.com> (https://trevoreyre.com)",
-  "license": "MIT",
-  "repository": "trevoreyre/autocomplete",
-  "bugs": "https://github.com/trevoreyre/autocomplete/issues",
-  "private": false,
-  "publishConfig": {
-    "access": "public"
-  }
+  ]
+  
 }
