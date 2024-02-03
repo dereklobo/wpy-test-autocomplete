@@ -66,27 +66,24 @@ const createConfig = async ({ root, plugins = [] }) => {
 }
 
 const config = async () => {
-  const [
-    autocompleteConfig,
-    autocompleteJsConfig,
-    autocompleteVueConfig,
-  ] = await Promise.all([
-    createConfig({ root: 'packages/autocomplete' }),
-    createConfig({ root: 'packages/autocomplete-js' }),
-    createConfig({
-      root: 'packages/autocomplete-vue',
-      plugins: [
-        commonjs(),
-        vue({
-          css: false,
-          compileTemplate: true,
-          template: {
-            isProduction: true,
-          },
-        }),
-      ],
-    }),
-  ])
+  const [autocompleteConfig, autocompleteJsConfig, autocompleteVueConfig] =
+    await Promise.all([
+      createConfig({ root: 'packages/autocomplete' }),
+      createConfig({ root: 'packages/autocomplete-js' }),
+      createConfig({
+        root: 'packages/autocomplete-vue',
+        plugins: [
+          commonjs(),
+          vue({
+            css: false,
+            compileTemplate: true,
+            template: {
+              isProduction: true,
+            },
+          }),
+        ],
+      }),
+    ])
 
   return Promise.resolve([
     ...autocompleteConfig,

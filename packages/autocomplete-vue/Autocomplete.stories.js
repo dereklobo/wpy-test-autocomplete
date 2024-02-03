@@ -18,19 +18,19 @@ const CustomInput = Vue.component('CustomInput', {
   `,
 })
 
-const search = input => {
+const search = (input) => {
   if (input.length < 1) {
     return []
   }
-  return countries.filter(country => {
+  return countries.filter((country) => {
     return country.toLowerCase().startsWith(input.toLowerCase())
   })
 }
 
 const wikiUrl = 'https://en.wikipedia.org'
 const wikiParams = 'action=query&list=search&format=json&origin=*'
-const searchWikipedia = input =>
-  new Promise(resolve => {
+const searchWikipedia = (input) =>
+  new Promise((resolve) => {
     const url = `${wikiUrl}/w/api.php?${wikiParams}&srsearch=${encodeURI(
       input
     )}`
@@ -40,8 +40,8 @@ const searchWikipedia = input =>
     }
 
     fetch(url)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         resolve(data.query.search)
       })
   })
@@ -77,7 +77,7 @@ export const DefaultResults = () => ({
       if (input.length < 1) {
         return ['Canada', 'Mexico', 'United Kingdom', 'Russia']
       }
-      return countries.filter(country => {
+      return countries.filter((country) => {
         return country.toLowerCase().startsWith(input.toLowerCase())
       })
     },

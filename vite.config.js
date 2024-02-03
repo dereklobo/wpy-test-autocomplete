@@ -3,8 +3,6 @@ import vue from '@vitejs/plugin-vue'
 import commonjs from 'vite-plugin-commonjs'
 import { resolve } from 'path'
 
-const root = 'packages/autocomplete-vue';
-const pkg = import(`./${root}/package.json`)
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
@@ -48,6 +46,6 @@ export default defineConfig({
       template: {
         isProduction: true,
       },
-    })
+    }),
   ],
 })

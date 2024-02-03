@@ -1,5 +1,5 @@
 {
-  "name": "autocomplete",
+  "name": "autocomplete-vue",
   "version": "3.0.0",
   "description": "Simple autocomplete component in vanilla JS and Vue",
   "type": "module",

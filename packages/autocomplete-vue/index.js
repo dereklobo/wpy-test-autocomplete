@@ -6,7 +6,7 @@ function install(Vue) {
     return
   }
   install.installed = true
-  Vue.component('Autocomplete', Autocomplete)
+  Vue.component('AutoComplete', Autocomplete)
 }
 
 const plugin = { install }

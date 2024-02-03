@@ -1,13 +1,13 @@
 <template>
   <div ref="root">
     <slot
-      :rootProps="rootProps"
-      :inputProps="inputProps"
-      :inputListeners="inputListeners"
-      :resultListProps="resultListProps"
-      :resultListListeners="resultListListeners"
+      :root-props="rootProps"
+      :input-props="inputProps"
+      :input-listeners="inputListeners"
+      :result-list-props="resultListProps"
+      :result-list-listeners="resultListListeners"
       :results="results"
-      :resultProps="resultProps"
+      :result-props="resultProps"
     >
       <div v-bind="rootProps">
         <input
@@ -44,9 +44,8 @@ import debounce from '../autocomplete/util/debounce.js'
 import getAriaLabel from '../autocomplete/util/getAriaLabel'
 
 export default {
-  name: 'Autocomplete',
+  name: 'AutoComplete',
   inheritAttrs: false,
-  emits:['update','submit'],
   props: {
     search: {
       type: Function,
@@ -62,7 +61,7 @@ export default {
     },
     getResultValue: {
       type: Function,
-      default: result => result,
+      default: (result) => result,
     },
     defaultValue: {
       type: String,
@@ -81,6 +80,7 @@ export default {
       default: false,
     },
   },
+  emits: ['update', 'submit'],
 
   data() {
     const core = new AutocompleteCore({

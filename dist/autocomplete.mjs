@@ -1,7 +1,7 @@
 var y = Object.defineProperty;
 var P = (t, e, s) => e in t ? y(t, e, { enumerable: !0, configurable: !0, writable: !0, value: s }) : t[e] = s;
 var o = (t, e, s) => (P(t, typeof e != "symbol" ? e + "" : e, s), s);
-import { openBlock as c, createElementBlock as p, renderSlot as m, createElementVNode as f, normalizeProps as v, guardReactiveProps as S, mergeProps as b, toHandlers as k, Fragment as C, renderList as A, toDisplayString as V } from "vue";
+import { openBlock as c, createElementBlock as p, renderSlot as m, createElementVNode as f, normalizeProps as v, guardReactiveProps as S, mergeProps as b, toHandlers as C, Fragment as k, renderList as A, toDisplayString as V } from "vue";
 const D = (t, e) => t.matches ? t.matches(e) : t.msMatchesSelector ? t.msMatchesSelector(e) : t.webkitMatchesSelector ? t.webkitMatchesSelector(e) : null, B = (t, e) => {
   let s = t;
   for (; s && s.nodeType === 1; ) {
@@ -163,9 +163,8 @@ const T = (t = "") => `${t}${++H}`, O = (t, e) => {
     s[i] = l;
   return s;
 }, q = {
-  name: "Autocomplete",
+  name: "AutoComplete",
   inheritAttrs: !1,
-  emits: ["update", "submit"],
   props: {
     search: {
       type: Function,
@@ -200,6 +199,7 @@ const T = (t = "") => `${t}${++H}`, O = (t, e) => {
       default: !1
     }
   },
+  emits: ["update", "submit"],
   data() {
     const t = new F({
       search: this.search,
@@ -353,8 +353,8 @@ function _(t, e, s, i, l, n) {
           onFocus: e[2] || (e[2] = (...u) => l.core.handleFocus && l.core.handleFocus(...u)),
           onBlur: e[3] || (e[3] = (...u) => l.core.handleBlur && l.core.handleBlur(...u))
         }), null, 16),
-        f("ul", b({ ref: "resultList" }, n.resultListProps, k(n.resultListListeners, !0)), [
-          (c(!0), p(C, null, A(l.results, (u, r) => m(t.$slots, "result", {
+        f("ul", b({ ref: "resultList" }, n.resultListProps, C(n.resultListListeners, !0)), [
+          (c(!0), p(k, null, A(l.results, (u, r) => m(t.$slots, "result", {
             result: u,
             props: n.resultProps[r]
           }, () => [
@@ -369,7 +369,7 @@ function _(t, e, s, i, l, n) {
 }
 const g = /* @__PURE__ */ N(q, [["render", _]]);
 function a(t) {
-  a.installed || (a.installed = !0, t.component("Autocomplete", g));
+  a.installed || (a.installed = !0, t.component("AutoComplete", g));
 }
 const G = { install: a };
 let d;
