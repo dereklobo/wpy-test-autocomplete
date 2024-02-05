@@ -230,8 +230,8 @@ const T = (t = "") => `${t}${++H}`, O = (t, e) => {
       return {
         class: this.baseClass,
         style: { position: "relative" },
-        "data-expanded": this.expanded,
-        "data-loading": this.loading ? !0 : null,
+        "data-expanded": this.expanded ? !0 : null,
+        "data-loading": this.loading,
         "data-position": this.position
       };
     },
@@ -247,7 +247,7 @@ const T = (t = "") => `${t}${++H}`, O = (t, e) => {
         "aria-autocomplete": "list",
         "aria-haspopup": "listbox",
         "aria-owns": this.resultListId,
-        "aria-expanded": this.expanded ? !0 : null,
+        "aria-expanded": this.expanded ? "true" : "false",
         "aria-activedescendant": this.selectedIndex > -1 ? this.resultProps[this.selectedIndex].id : "",
         ...this.$attrs
       };

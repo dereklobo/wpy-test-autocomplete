@@ -117,8 +117,8 @@ export default {
       return {
         class: this.baseClass,
         style: { position: 'relative' },
-        'data-expanded': this.expanded,
-        'data-loading': this.loading ? true : null,
+        'data-expanded': this.expanded ? true : null,
+        'data-loading': this.loading ,
         'data-position': this.position,
       }
     },
@@ -134,7 +134,7 @@ export default {
         'aria-autocomplete': 'list',
         'aria-haspopup': 'listbox',
         'aria-owns': this.resultListId,
-        'aria-expanded': this.expanded ? true : null,
+        'aria-expanded': this.expanded ? 'true' : 'false',
         'aria-activedescendant':
           this.selectedIndex > -1
             ? this.resultProps[this.selectedIndex].id
