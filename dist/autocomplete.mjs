@@ -231,7 +231,7 @@ const T = (t = "") => `${t}${++H}`, O = (t, e) => {
         class: this.baseClass,
         style: { position: "relative" },
         "data-expanded": this.expanded ? !0 : null,
-        "data-loading": !!this.loading,
+        "data-loading": this.loading ? !0 : null,
         "data-position": this.position
       };
     },
