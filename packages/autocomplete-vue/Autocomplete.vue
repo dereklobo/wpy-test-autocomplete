@@ -118,7 +118,7 @@ export default {
         class: this.baseClass,
         style: { position: 'relative' },
         'data-expanded': this.expanded ? true : null,
-        'data-loading': this.loading ,
+        'data-loading': this.loading ? true : false,
         'data-position': this.position,
       }
     },
