@@ -118,7 +118,7 @@ export default {
         class: this.baseClass,
         style: { position: 'relative' },
         'data-expanded': this.expanded,
-        'data-loading': this.loading,
+        'data-loading': this.loading ? true : null,
         'data-position': this.position,
       }
     },
@@ -130,7 +130,7 @@ export default {
         autocomplete: 'off',
         autocapitalize: 'off',
         autocorrect: 'off',
-        spellcheck: null,
+        spellcheck: true,
         'aria-autocomplete': 'list',
         'aria-haspopup': 'listbox',
         'aria-owns': this.resultListId,
