@@ -134,7 +134,7 @@ export default {
         'aria-autocomplete': 'list',
         'aria-haspopup': 'listbox',
         'aria-owns': this.resultListId,
-        'aria-expanded': this.expanded ? 'true' : 'false',
+        'aria-expanded': this.expanded ? true : null,
         'aria-activedescendant':
           this.selectedIndex > -1
             ? this.resultProps[this.selectedIndex].id
